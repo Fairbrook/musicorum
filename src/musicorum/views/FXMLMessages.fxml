@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="250.0" prefWidth="500.0" styleClass="contentPane" stylesheets="@css/general.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="musicorum.views.FXMLMessagesController">
+   <children>
+      <Label fx:id="txtTitle" layoutX="129.0" layoutY="28.0" prefHeight="51.0" prefWidth="363.0" text="Label">
+         <styleClass>
+            <String fx:value="lbl-title" />
+            <String fx:value="txtColor" />
+         </styleClass>
+      </Label>
+      <ImageView fitHeight="72.0" fitWidth="87.0" layoutX="37.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/if_police_309038.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <Label fx:id="txtMensaje" layoutX="37.0" layoutY="108.0" prefHeight="72.0" prefWidth="445.0" text="Label">
+         <styleClass>
+            <String fx:value="lbl-big" />
+            <String fx:value="txtColor" />
+         </styleClass>
+      </Label>
+      <Button layoutX="222.0" layoutY="205.0" mnemonicParsing="false" onAction="#aceptar" styleClass="btn" text="Aceptar" />
+   </children>
+</AnchorPane>

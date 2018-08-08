@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://process/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://process/">
+
+<xs:element name="addAlumno" type="tns:addAlumno" />
+
+<xs:element name="addAlumnoResponse" type="tns:addAlumnoResponse" />
+
+<xs:element name="addEjercicio" type="tns:addEjercicio" />
+
+<xs:element name="addEjercicioResponse" type="tns:addEjercicioResponse" />
+
+<xs:element name="addEjerciciosPorAlumno" type="tns:addEjerciciosPorAlumno" />
+
+<xs:element name="addEjerciciosPorAlumnoResponse" type="tns:addEjerciciosPorAlumnoResponse" />
+
+<xs:element name="addEscuela" type="tns:addEscuela" />
+
+<xs:element name="addEscuelaResponse" type="tns:addEscuelaResponse" />
+
+<xs:element name="addGrupo" type="tns:addGrupo" />
+
+<xs:element name="addGrupoResponse" type="tns:addGrupoResponse" />
+
+<xs:element name="addGruposPorProfesor" type="tns:addGruposPorProfesor" />
+
+<xs:element name="addGruposPorProfesorResponse" type="tns:addGruposPorProfesorResponse" />
+
+<xs:element name="addUnidad" type="tns:addUnidad" />
+
+<xs:element name="addUnidadResponse" type="tns:addUnidadResponse" />
+
+<xs:element name="checkUsername" type="tns:checkUsername" />
+
+<xs:element name="checkUsernameResponse" type="tns:checkUsernameResponse" />
+
+<xs:element name="deleteAlumno" type="tns:deleteAlumno" />
+
+<xs:element name="deleteAlumnoResponse" type="tns:deleteAlumnoResponse" />
+
+<xs:element name="deleteGrupo" type="tns:deleteGrupo" />
+
+<xs:element name="deleteGrupoResponse" type="tns:deleteGrupoResponse" />
+
+<xs:element name="escuelaLogin" type="tns:escuelaLogin" />
+
+<xs:element name="escuelaLoginResponse" type="tns:escuelaLoginResponse" />
+
+<xs:element name="getAlumnos" type="tns:getAlumnos" />
+
+<xs:element name="getAlumnosResponse" type="tns:getAlumnosResponse" />
+
+<xs:element name="getEjercicioById" type="tns:getEjercicioById" />
+
+<xs:element name="getEjercicioByIdResponse" type="tns:getEjercicioByIdResponse" />
+
+<xs:element name="getEjercicioExitos" type="tns:getEjercicioExitos" />
+
+<xs:element name="getEjercicioExitosResponse" type="tns:getEjercicioExitosResponse" />
+
+<xs:element name="getEjercicioFile" type="tns:getEjercicioFile" />
+
+<xs:element name="getEjercicioFileResponse" type="tns:getEjercicioFileResponse" />
+
+<xs:element name="getEjercicioTotal" type="tns:getEjercicioTotal" />
+
+<xs:element name="getEjercicioTotalResponse" type="tns:getEjercicioTotalResponse" />
+
+<xs:element name="getEjercicios" type="tns:getEjercicios" />
+
+<xs:element name="getEjerciciosByAlumno" type="tns:getEjerciciosByAlumno" />
+
+<xs:element name="getEjerciciosByAlumnoResponse" type="tns:getEjerciciosByAlumnoResponse" />
+
+<xs:element name="getEjerciciosResponse" type="tns:getEjerciciosResponse" />
+
+<xs:element name="getEscuelas" type="tns:getEscuelas" />
+
+<xs:element name="getEscuelasResponse" type="tns:getEscuelasResponse" />
+
+<xs:element name="getEstadisticas" type="tns:getEstadisticas" />
+
+<xs:element name="getEstadisticasResponse" type="tns:getEstadisticasResponse" />
+
+<xs:element name="getGrupoById" type="tns:getGrupoById" />
+
+<xs:element name="getGrupoByIdResponse" type="tns:getGrupoByIdResponse" />
+
+<xs:element name="getGruposByEscuela" type="tns:getGruposByEscuela" />
+
+<xs:element name="getGruposByEscuelaResponse" type="tns:getGruposByEscuelaResponse" />
+
+<xs:element name="getGruposByProfesor" type="tns:getGruposByProfesor" />
+
+<xs:element name="getGruposByProfesorResponse" type="tns:getGruposByProfesorResponse" />
+
+<xs:element name="getProfesor" type="tns:getProfesor" />
+
+<xs:element name="getProfesorResponse" type="tns:getProfesorResponse" />
+
+<xs:element name="getUnidadById" type="tns:getUnidadById" />
+
+<xs:element name="getUnidadByIdResponse" type="tns:getUnidadByIdResponse" />
+
+<xs:element name="getUnidades" type="tns:getUnidades" />
+
+<xs:element name="getUnidadesByAlumno" type="tns:getUnidadesByAlumno" />
+
+<xs:element name="getUnidadesByAlumnoResponse" type="tns:getUnidadesByAlumnoResponse" />
+
+<xs:element name="getUnidadesResponse" type="tns:getUnidadesResponse" />
+
+<xs:element name="login" type="tns:login" />
+
+<xs:element name="loginResponse" type="tns:loginResponse" />
+
+<xs:element name="register" type="tns:register" />
+
+<xs:element name="registerResponse" type="tns:registerResponse" />
+
+<xs:element name="updateAlumno" type="tns:updateAlumno" />
+
+<xs:element name="updateAlumnoResponse" type="tns:updateAlumnoResponse" />
+
+<xs:complexType name="addGrupo">
+<xs:sequence>
+<xs:element name="grupo" type="tns:grupo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="grupo">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+<xs:element name="id_escuela" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGrupoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGruposPorProfesor">
+<xs:sequence>
+<xs:element name="grupo" type="tns:grupo" minOccurs="0" />
+<xs:element name="profesor" type="tns:profesor" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="profesor">
+<xs:sequence>
+<xs:element name="apMaterno" type="xs:string" minOccurs="0" />
+<xs:element name="apPaterno" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" />
+<xs:element name="id_escuela" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGruposPorProfesorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="profesor" type="tns:profesor" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAlumnos">
+<xs:sequence>
+<xs:element name="IDProfesor" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAlumnosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:alumno" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="alumno">
+<xs:sequence>
+<xs:element name="anotaciones" type="xs:string" minOccurs="0" />
+<xs:element name="apMaterno" type="xs:string" minOccurs="0" />
+<xs:element name="apPaterno" type="xs:string" minOccurs="0" />
+<xs:element name="codigo" type="xs:string" minOccurs="0" />
+<xs:element name="grupo_id" type="xs:int" />
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAlumno">
+<xs:sequence>
+<xs:element name="alumno" type="tns:alumno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAlumnoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEscuelas">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getEscuelasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:escuela" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="escuela">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUnidad">
+<xs:sequence>
+<xs:element name="unidad" type="tns:unidad" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unidad">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUnidadResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjerciciosByAlumno">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjerciciosByAlumnoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ejercicio" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ejercicio">
+<xs:sequence>
+<xs:element name="archivo" type="xs:int" />
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="profesor_id" type="xs:int" />
+<xs:element name="unidad_id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjercicioById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjercicioByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ejercicio" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUnidadById">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUnidadByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:unidad" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGruposByEscuela">
+<xs:sequence>
+<xs:element name="IDEscuela" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGruposByEscuelaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:grupo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUnidadesByAlumno">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUnidadesByAlumnoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:unidad" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjercicioTotal">
+<xs:sequence>
+<xs:element name="ejercicio" type="tns:ejercicio" minOccurs="0" />
+<xs:element name="Alumno" type="tns:alumno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjercicioTotalResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkUsername">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkUsernameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjercicioExitos">
+<xs:sequence>
+<xs:element name="ejercicio" type="tns:ejercicio" minOccurs="0" />
+<xs:element name="Alumno" type="tns:alumno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjercicioExitosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjercicios">
+<xs:sequence>
+<xs:element name="IDProfesor" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjerciciosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ejercicio" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGrupoById">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGrupoByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:grupo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEstadisticas">
+<xs:sequence>
+<xs:element name="id_alumno" type="xs:int" />
+<xs:element name="id_ejercicio" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEstadisticasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estadistica" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="estadistica">
+<xs:sequence>
+<xs:element name="exito" type="xs:boolean" />
+<xs:element name="fecha" type="xs:string" minOccurs="0" />
+<xs:element name="num" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="escuelaLogin">
+<xs:sequence>
+<xs:element name="escuela" type="tns:escuela" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="escuelaLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEscuela">
+<xs:sequence>
+<xs:element name="escuela" type="tns:escuela" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEscuelaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGruposByProfesor">
+<xs:sequence>
+<xs:element name="IDProfesor" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGruposByProfesorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:grupo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjercicioFile">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEjercicioFileResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAlumno">
+<xs:sequence>
+<xs:element name="alumno" type="tns:alumno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAlumnoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAlumno">
+<xs:sequence>
+<xs:element name="alumno" type="tns:alumno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAlumnoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEjerciciosPorAlumno">
+<xs:sequence>
+<xs:element name="EjerciciosPorAlumno" type="tns:ejerciciosPorAlumno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ejerciciosPorAlumno">
+<xs:sequence>
+<xs:element name="alumno_id" type="xs:int" />
+<xs:element name="ejercicio_id" type="xs:int" />
+<xs:element name="exito" type="xs:boolean" />
+<xs:element name="fecha" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEjerciciosPorAlumnoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProfesor">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProfesorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:profesor" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="register">
+<xs:sequence>
+<xs:element name="profesor" type="tns:profesor" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteGrupo">
+<xs:sequence>
+<xs:element name="grupo" type="tns:grupo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteGrupoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUnidades">
+<xs:sequence>
+<xs:element name="IDProfesor" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUnidadesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:unidad" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEjercicio">
+<xs:sequence>
+<xs:element name="ejercicio" type="tns:ejercicio" minOccurs="0" />
+<xs:element name="archivo" type="xs:base64Binary" nillable="true" minOccurs="0" />
+<xs:element name="arreglo" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEjercicioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

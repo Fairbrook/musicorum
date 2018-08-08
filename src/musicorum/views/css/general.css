@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 4, 2018, 11:56:19 AM
+    Author     : Kevin Alan Martinez Virgen 14300260 8B1
+*/
+.contentPane{
+    -fx-background-color: #373737;
+    -fx-text-fill: white;
+}
+
+.txtHeaderInput{
+    -fx-font-size: 35px;
+    -fx-alignment: center;
+}
+
+.txtLabelInput{
+    -fx-font-size: 15px;
+}
+
+.btn{
+    -fx-background-color: #1ed760;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-radius: 0;
+}
+
+.btn-red{
+    -fx-background-color: #ad3066;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-radius: 0;
+}
+
+.btn-green{
+    -fx-background-color: #9ead2f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-radius: 0;
+}
+
+.btn-menu{
+    -fx-border-color: #1ed760;
+}
+
+.txtColor{
+    -fx-text-fill: white;
+}
+
+.lbl-medium{
+    -fx-font-size: 15px;
+}
+
+.lbl-big{
+    -fx-font-size: 22px;
+}
+
+.lbl-title{
+    -fx-font-size: 35px;
+}
+
+.btn-selected{
+    -fx-border-width: 5px 5px 5px 10px;
+    -fx-border-color: #1ed760 #1ed760 #1ed760 #373737;    
+}
+
+.axis {
+    -fx-tick-label-fill: white;
+}
+ 
+.chart-title {
+  -fx-text-fill: white;
+  -fx-font-size: 20px;
+}
